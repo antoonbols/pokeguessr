@@ -1,0 +1,21 @@
+<div class="gamebox">
+    <div class="guessbox" *ngIf="currentGuessItem !== null">
+        <img src="assets/images/redblueguessr/{{currentGuessItem.fileName}}" alt="A location in the game." />
+    </div>
+    <div class="mapbox">
+        <redblue-map (hoveredItem)="updateHoveredMapItem($event)" (selectedItem)="updateSelectedMapItem($event)"></redblue-map>
+    </div>
+    <div class="feedbackbox redbluegameboy" *ngIf="!isGameOver; else gameOver">
+        <div class="hoveredItemBox">
+            <p class="redbluegameboy">Selected: </p>
+            <p class="redbluegameboy">&zwnj;{{GetPlaceName(hoveredMapItem)}}</p>
+        </div>
+        <p class="redbluegameboy">{{lastGuessStatus}}</p>
+    </div>
+    <ng-template #gameOver>
+        <div class="gameoverbox redbluegameboy">
+            <p class="redbluegameboy">You have guessed all the spots!</p>
+            <button (click)="resetGame()">Play again?</button>
+        </div>
+    </ng-template>
+</div>
