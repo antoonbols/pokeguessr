@@ -18,9 +18,12 @@
     padding: 3px;
   }
 
-  @font-face {
-    font-family: 'gameboy_redblue';
-    src: url('/assets/fonts/PKMN_RBYGSC.ttf');
+  div.gameoverbox {
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 2%;
+    padding: 3px;
   }
 
   .redbluegameboy {

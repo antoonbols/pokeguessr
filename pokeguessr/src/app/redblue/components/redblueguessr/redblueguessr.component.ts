@@ -770,6 +770,10 @@ export class RedBlueGuessrComponent {
     this.setGame();
   }
 
+  public skipGuess() {
+    this.goNextGuess();
+  }
+
   private setGame() {
     this.isGameOver = false;
     this.guessItemsOrder = this.guessItems.map(i => i.id).sort(() => Math.random() - 0.5);
@@ -792,19 +796,22 @@ export class RedBlueGuessrComponent {
   public updateSelectedMapItem(selectedMapItemEvent: {
     selectedItem: string;
   }): void {
-    console.log(this.isGameOver);
     if(this.currentGuessItem !== null && selectedMapItemEvent.selectedItem === this.currentGuessItem.solution) {
       this.lastGuessStatus = "Correct!";
-      this.currentGuessItemsIndex++;
-      if(this.currentGuessItemsIndex >= this.guessItems.length) {
-        this.isGameOver = true;
-      }
-      else {
-        this.setCurrentGuessItem(this.currentGuessItemsIndex);
-      }
+      this.goNextGuess();
     }
     else {
       this.lastGuessStatus = "Wrong. Try again?"
+    }
+  }
+
+  private goNextGuess() {
+    this.currentGuessItemsIndex++;
+    if(this.currentGuessItemsIndex >= this.guessItems.length) {
+      this.isGameOver = true;
+    }
+    else {
+      this.setCurrentGuessItem(this.currentGuessItemsIndex);
     }
   }
 

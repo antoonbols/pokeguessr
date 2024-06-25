@@ -11,6 +11,7 @@
             <p class="redbluegameboy">&zwnj;{{GetPlaceName(hoveredMapItem)}}</p>
         </div>
         <p class="redbluegameboy">{{lastGuessStatus}}</p>
+        <button (click)="skipGuess()">Skip</button>
     </div>
     <ng-template #gameOver>
         <div class="gameoverbox redbluegameboy">
