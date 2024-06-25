@@ -362,11 +362,6 @@ export class RedBlueGuessrComponent {
       solution: "route-14"
     },
     {
-      id: "mtc10kwt",
-      fileName: "mtc10kwt.png",
-      solution: "route-15"
-    },
-    {
       id: "heuefuxm",
       fileName: "heuefuxm.png",
       solution: "route-15"
@@ -756,7 +751,7 @@ export class RedBlueGuessrComponent {
     { id: "viridian-forest", name: "Viridian Forest" },
     { id: "mt-moon", name: "Mt Moon" },
     { id: "rock-tunnel", name: "Rock Tunnel" },
-    { id: "seafoam-island", name: "Seafoam Island" }
+    { id: "seafoam-islands", name: "Seafoam Island" }
 
   ];
     

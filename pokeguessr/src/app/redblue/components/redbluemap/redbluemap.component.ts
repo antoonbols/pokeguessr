@@ -63,7 +63,7 @@ export class RedBlueMapComponent implements OnChanges {
     { id: "viridian-forest", itemId: "viridian-forest", width: 20, height: 20, x: 80, y: 80 },
     { id: "mt-moon", itemId: "mt-moon", width: 20, height: 20, x: 160, y: 40 },
     { id: "rock-tunnel", itemId: "rock-tunnel", width: 20, height: 20, x: 320, y: 60 },
-    { id: "seafoam-island", itemId: "seafoam-island", width: 20, height: 20, x: 140, y: 300 }
+    { id: "seafoam-islands", itemId: "seafoam-islands", width: 20, height: 20, x: 140, y: 300 }
   ];
 
   constructor() {}
